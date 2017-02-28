@@ -1,5 +1,7 @@
 # FXtended
 
+[![Build Status](https://jenkins.bbmsoft.net/buildStatus/icon?job=fxtended)](https://jenkins.bbmsoft.net/job/fxtended)
+
 FXtended is library heavily inspired by [Sven Efftinge](https://github.com/svenefftinge)'s [XtendFX](https://github.com/svenefftinge/xtendfx).
 
 Just like XtendFX it aims at making JavaFX programming with Xtend a joy by providing many useful active annotations and extension methods.

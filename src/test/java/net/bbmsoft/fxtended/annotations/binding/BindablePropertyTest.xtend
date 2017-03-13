@@ -558,7 +558,7 @@ class BindablePropertyTest {
 			  }
 			  
 			  private final static CssMetaData<Item, Something> SOMETHING = new javafx.css.CssMetaData<Item, net.bbmsoft.fxtended.annotations.binding.Something>(
-			    "-something", net.bbmsoft.fxtended.annotations.binding.StyleableEnumHelper.getEnumConverter(net.bbmsoft.fxtended.annotations.binding.Something.class), Something.A) {
+			    "-something", net.bbmsoft.fxtended.annotations.binding.impl.StyleableEnumHelper.getEnumConverter(net.bbmsoft.fxtended.annotations.binding.Something.class), Something.A) {
 			    
 			      @Override
 			      public boolean isSettable(Item styleable) {

@@ -197,7 +197,7 @@ class BindablePropertyTest {
 			  private StringProperty _nameProperty;
 			  
 			  public final String getName() {
-			    if(_nameProperty === null) {
+			    if(_nameProperty == null) {
 			      return _name;
 			    } else {
 			      return this._nameProperty.get();
@@ -205,7 +205,7 @@ class BindablePropertyTest {
 			  }
 			  
 			  public final void setName(final String value) {
-			    if(_nameProperty === null) {
+			    if(_nameProperty == null) {
 			      _name = value;
 			    } else {
 			      this._nameProperty.set(value);
@@ -213,7 +213,7 @@ class BindablePropertyTest {
 			  }
 			  
 			  public final StringProperty nameProperty() {
-			    if(_nameProperty === null) {
+			    if(_nameProperty == null) {
 			      _nameProperty = new javafx.beans.property.SimpleStringProperty(_name);
 			    }
 			    return _nameProperty;
@@ -248,7 +248,7 @@ class BindablePropertyTest {
 			  private StringProperty _nameProperty;
 			  
 			  public final String getName() {
-			    if(_nameProperty === null) {
+			    if(_nameProperty == null) {
 			      return _name;
 			    } else {
 			      return this._nameProperty.get();
@@ -256,7 +256,7 @@ class BindablePropertyTest {
 			  }
 			  
 			  public final void setName(final String value) {
-			    if(_nameProperty === null) {
+			    if(_nameProperty == null) {
 			      _name = value;
 			    } else {
 			      this._nameProperty.set(value);
@@ -264,7 +264,7 @@ class BindablePropertyTest {
 			  }
 			  
 			  public final StringProperty nameProperty() {
-			    if(_nameProperty === null) {
+			    if(_nameProperty == null) {
 			      _nameProperty = new javafx.beans.property.SimpleStringProperty(_name);
 			    }
 			    return _nameProperty;
@@ -323,7 +323,7 @@ class BindablePropertyTest {
 			    
 			      @Override
 			      public boolean isSettable(Item styleable) {
-			        return styleable._somethingProperty === null || !styleable._somethingProperty.isBound();
+			        return styleable._somethingProperty == null || !styleable._somethingProperty.isBound();
 			      }
 			    
 			      @Override
@@ -408,7 +408,7 @@ class BindablePropertyTest {
 			    
 			      @Override
 			      public boolean isSettable(Item styleable) {
-			        return styleable._somethingProperty === null || !styleable._somethingProperty.isBound();
+			        return styleable._somethingProperty == null || !styleable._somethingProperty.isBound();
 			      }
 			    
 			      @Override
@@ -438,7 +438,7 @@ class BindablePropertyTest {
 			    
 			      @Override
 			      public boolean isSettable(Item styleable) {
-			        return styleable._somethingElseProperty === null || !styleable._somethingElseProperty.isBound();
+			        return styleable._somethingElseProperty == null || !styleable._somethingElseProperty.isBound();
 			      }
 			    
 			      @Override
@@ -562,7 +562,7 @@ class BindablePropertyTest {
 			    
 			      @Override
 			      public boolean isSettable(Item styleable) {
-			        return styleable._somethingProperty === null || !styleable._somethingProperty.isBound();
+			        return styleable._somethingProperty == null || !styleable._somethingProperty.isBound();
 			      }
 			    
 			      @Override

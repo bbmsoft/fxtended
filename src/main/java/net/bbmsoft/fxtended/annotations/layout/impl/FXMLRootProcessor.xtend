@@ -88,7 +88,7 @@ class FXMLRootProcessor extends AbstractClassProcessor {
 
 				«URL.name» location = «simpleName».class.getResource("«completePath(path)»");
 
-				if(location === null) {
+				if(location == null) {
 					throw new «IllegalStateException.name»("Cannot find FXML file '«path»'!");
 				}
 

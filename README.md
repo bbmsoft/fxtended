@@ -1,6 +1,6 @@
 # FXtended
 
-[![Build Status](https://travis-ci.org/babymotte/fxtended.svg?branch=develop)
+[![Build Status](https://travis-ci.org/babymotte/fxtended.svg?branch=develop)](https://travis-ci.org/babymotte/fxtended)
 
 FXtended is library heavily inspired by [Sven Efftinge](https://github.com/svenefftinge)'s [XtendFX](https://github.com/svenefftinge/xtendfx).
 

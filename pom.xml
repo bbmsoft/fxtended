@@ -4,131 +4,68 @@
 
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>net.bbmsoft</groupId>
 	<artifactId>fxtended</artifactId>
 	<version>2.0.0-SNAPSHOT</version>
 
 	<name>FXtended Annotations</name>
 	<description>A collection of active annotations and extension methods for JavaFX 8 programming in the Xtend programming language.</description>
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<java.version>1.8</java.version>
-		<xtend.version>2.12.0</xtend.version>
-		<jar.plugin.version>3.0.2</jar.plugin.version>
-		<bundle.plugin.version>3.2.0</bundle.plugin.version>
-		<compiler.plugin.version>3.0</compiler.plugin.version>
-		<source.plugin.version>3.0.1</source.plugin.version>
-		<javadoc.plugin.version>2.10.4</javadoc.plugin.version>
-		<guava.version>18.0</guava.version>
-	</properties>
-
-	<build>
-
-		<plugins>
-
-			<plugin>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>${compiler.plugin.version}</version>
-				<configuration>
-					<source>${java.version}</source>
-					<target>${java.version}</target>
-				</configuration>
-			</plugin>
-
-			<plugin>
-				<artifactId>maven-jar-plugin</artifactId>
-				<version>${jar.plugin.version}</version>
-				<configuration>
-					<archive>
-						<manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
-					</archive>
-				</configuration>
-			</plugin>
-
-			<plugin>
-				<groupId>org.apache.felix</groupId>
-				<artifactId>maven-bundle-plugin</artifactId>
-				<version>${bundle.plugin.version}</version>
-				<executions>
-					<execution>
-						<id>bundle-manifest</id>
-						<phase>process-classes</phase>
-						<goals>
-							<goal>manifest</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-source-plugin</artifactId>
-				<version>${source.plugin.version}</version>
-				<executions>
-					<execution>
-						<id>attach-sources</id>
-						<phase>verify</phase>
-						<goals>
-							<goal>jar-no-fork</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>${javadoc.plugin.version}</version>
-				<executions>
-					<execution>
-						<id>attach-sources</id>
-						<phase>verify</phase>
-						<goals>
-							<goal>jar</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-
-		</plugins>
-
-	</build>
+	<parent>
+		<groupId>net.bbmsoft</groupId>
+		<artifactId>bbmsoft-parent</artifactId>
+		<version>2.0.0-SNAPSHOT</version>
+	</parent>
 
 	<dependencies>
 
 		<dependency>
 			<groupId>org.eclipse.xtend</groupId>
 			<artifactId>org.eclipse.xtend.lib</artifactId>
-			<version>${xtend.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
-			<version>${guava.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.eclipse.xtend</groupId>
 			<artifactId>org.eclipse.xtend.core</artifactId>
-			<version>${xtend.version}</version>
-			<scope>test</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>org.eclipse.xtext</groupId>
 			<artifactId>org.eclipse.xtext.xbase.testing</artifactId>
-			<version>${xtend.version}</version>
-			<scope>test</scope>
-			<exclusions>
-				<exclusion>
-					<groupId>org.eclipse.lsp4j</groupId>
-					<artifactId>*</artifactId>
-				</exclusion>
-			</exclusions>
 		</dependency>
 
 	</dependencies>
+
+	<build>
+
+		<plugins>
+
+			<plugin>
+				<groupId>org.eclipse.xtend</groupId>
+				<artifactId>xtend-maven-plugin</artifactId>
+				<version>${xtend.version}</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>compile</goal>
+							<goal>testCompile</goal>
+							<goal>xtend-install-debug-info</goal>
+							<goal>xtend-test-install-debug-info</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<outputDirectory>${project.build.directory}/src-gen/main/xtend</outputDirectory>
+					<testOutputDirectory>${project.build.directory}/src-gen/test/xtend</testOutputDirectory>
+				</configuration>
+			</plugin>
+
+		</plugins>
+
+	</build>
 
 </project>

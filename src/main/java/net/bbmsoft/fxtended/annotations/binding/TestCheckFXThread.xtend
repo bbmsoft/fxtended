@@ -7,7 +7,7 @@ import org.eclipse.xtend.lib.macro.Active
 
 /**
  * Similar to {@link CheckFXThread} but this version has no effect unless the
- * system property "xtend.compile.check.fx.thread" is set to "true" (case
+ * system property "fxtended.compile.check.fx.thread" is set to "true" (case
  * insensitive) during compilation.
  * <p>
  * This annotation is NOT supposed to be used in API methods, but instead is

@@ -24,7 +24,7 @@ class CheckFXThreadProcessor implements TransformationParticipant<MutableMemberD
 
 	private def dispatch void transform(MutableMethodDeclaration annotatedMethod, extension TransformationContext context) {
 		
-		if(annotatedMethod.findAnnotation(findTypeGlobally(TestCheckFXThread)) !== null && !'true'.equalsIgnoreCase(System.getProperty('xtend.compile.check.fx.thread'))) {
+		if(annotatedMethod.findAnnotation(findTypeGlobally(TestCheckFXThread)) !== null && !'true'.equalsIgnoreCase(System.getProperty('fxtended.compile.check.fx.thread'))) {
 			return
 		}
 

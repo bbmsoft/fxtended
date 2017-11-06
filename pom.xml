@@ -61,6 +61,7 @@
 				<configuration>
 					<outputDirectory>${project.build.directory}/src-gen/main/xtend</outputDirectory>
 					<testOutputDirectory>${project.build.directory}/src-gen/test/xtend</testOutputDirectory>
+					<javaSourceVersion>1.8</javaSourceVersion>
 				</configuration>
 			</plugin>
 

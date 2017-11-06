@@ -1,0 +1,14 @@
+src: src/main/java,target/src-gen/main/xtend
+bin: target/classes
+Export-Package: \
+	net.bbmsoft.fxtended.annotations.app,\
+	net.bbmsoft.fxtended.annotations.app.impl,\
+	net.bbmsoft.fxtended.annotations.binding,\
+	net.bbmsoft.fxtended.annotations.binding.impl,\
+	net.bbmsoft.fxtended.annotations.concurrent,\
+	net.bbmsoft.fxtended.annotations.concurrent.impl,\
+	net.bbmsoft.fxtended.annotations.css,\
+	net.bbmsoft.fxtended.annotations.css.impl,\
+	net.bbmsoft.fxtended.annotations.layout,\
+	net.bbmsoft.fxtended.annotations.layout.impl,\
+	net.bbmsoft.fxtended.extensions

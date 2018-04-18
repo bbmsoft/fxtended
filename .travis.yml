@@ -1,10 +1,46 @@
 language: java
 
-jdk:
-  - oraclejdk8
-
-sudo: false
-addons:
-  apt:
-    packages:
-      - oracle-java8-installer
+matrix:
+  include:
+    ## https://docs.travis-ci.com/user/reference/trusty/
+    ## has newer Maven
+    - os: linux
+      sudo: false
+      dist: trusty
+      jdk: oraclejdk8
+      install: true
+      env: FAILURES_ALLOWED=false
+      addons:
+        apt:
+          packages:
+          ## RPM
+            - rpm
+          ## DEB
+            - fakeroot
+    ## OpenJDK should work too, but TravisCI has no up2date Ubuntu-Image, makes it impossible to install OpenJFX
+    - os: linux
+      sudo: false
+      dist: trusty
+      jdk: oraclejdk9
+      install: true
+      env: FAILURES_ALLOWED=false
+      addons:
+        apt:
+          packages:
+          ## RPM
+            - rpm
+          ## DEB
+            - fakeroot
+    ## has older Maven
+    - os: linux
+      sudo: false
+      dist: precise
+      jdk: oraclejdk8
+      env: FAILURES_ALLOWED=false
+      addons:
+        apt:
+          packages:
+          ## RPM
+            - rpm
+          ## DEB
+            - fakeroot

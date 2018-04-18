@@ -23,7 +23,7 @@ matrix:
       dist: trusty
       jdk: oraclejdk9
       install: true
-      env: FAILURES_ALLOWED=false
+      env: FAILURES_ALLOWED=true
       addons:
         apt:
           packages:

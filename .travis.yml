@@ -18,19 +18,19 @@ matrix:
           ## DEB
             - fakeroot
     ## OpenJDK should work too, but TravisCI has no up2date Ubuntu-Image, makes it impossible to install OpenJFX
-    - os: linux
-      sudo: false
-      dist: trusty
-      jdk: oraclejdk9
-      install: true
-      env: FAILURES_ALLOWED=true
-      addons:
-        apt:
-          packages:
+#    - os: linux
+#      sudo: false
+#      dist: trusty
+#      jdk: oraclejdk9
+#      install: true
+#      env: FAILURES_ALLOWED=true
+#      addons:
+#        apt:
+#          packages:
           ## RPM
-            - rpm
+#            - rpm
           ## DEB
-            - fakeroot
+#            - fakeroot
     ## has older Maven
     - os: linux
       sudo: false

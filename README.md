@@ -1,5 +1,7 @@
 # FXtended
 
+[![Build Status](https://travis-ci.org/bbmsoft/fxtended.svg?branch=develop)](https://travis-ci.org/bbmsoft/fxtended)
+
 FXtended is library heavily inspired by [Sven Efftinge](https://github.com/svenefftinge)'s [XtendFX](https://github.com/svenefftinge/xtendfx).
 
 Just like XtendFX it aims at making JavaFX programming with Xtend a joy by providing many useful active annotations and extension methods.
@@ -63,11 +65,14 @@ to it.
 There are a bunch of possibilities to simply bind properties or add listeners to them with simple operators. Here are just a few examples:
 
 ```propertyA << propertyB``` does propertyA.bind(propertyB)
+
 ```propertyA >> propertyB``` does propertyB.bind(propertyA)
+
 ```propertyA <> propertyB``` does propertyA.bindBidirectional(propertyB)
 
 
 ```propertyA >> [newValue | handle(newValue)]``` adds a ChangeListener to propertyA. Also the listener is immediately called with propertyA's current value.
+
 ```propertyA >> [observable, oldValue, newValue | handle(newValue)]``` adds a ChangeListener to propertyA. Also the listener is immediately called with propertyA's current value.
 
 
@@ -78,7 +83,9 @@ There are a bunch of possibilities to simply bind properties or add listeners to
 
 
 ```numberPropertyA + numberPropertyB``` creates a NumberBinding who's calue is the sum of numberPropertyA's and numberPropertyB's values
+
 ```numberPropertyA - numberPropertyB``` creates a NumberBinding who's calue is the difference of numberPropertyA's and numberPropertyB's values
+
 ```numberPropertyA * numberPropertyB``` ... I guess you get the point. It also works with ```numberPropertyA + 5```, ```booleanPropertyA && booleanPropertyB```, etc.
 
 ## Observable Collections
